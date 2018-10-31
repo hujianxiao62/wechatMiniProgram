@@ -1,0 +1,13 @@
+<scroll-view>
+
+      <view class="detailContent">
+        <view class="detailContent_title">{{detailNewsTitle}}</view>
+        <view class="detailContentDetail">
+          <view class="detailContent_src">{{detailNewsSrc}}</view>
+          <view class="detailContent_date">{{detailNewsDate}}</view>
+          <view class="detailContent_readcount">{{detailNewsReadCount}}</view>
+        </view>
+      </view>
+
+
+</scroll-view>

@@ -1,0 +1,37 @@
+/**index.wxss**/
+
+.detailContent {
+  height: 200rpx;
+  width: 100%;
+   text-align: left;
+}
+
+.detailContent_title {
+    font-size: 50rpx;
+  display: flex;
+  height: 120rpx;
+   text-align: left;
+}
+
+.detailContent_src {
+  font-size: 20rpx;
+   text-align: left;
+}
+
+.detailContent_date {
+  font-size: 20rpx;
+   text-align: left;
+}
+
+.detailContent_readcount {
+  font-size: 20rpx;
+   text-align:right;
+}
+
+.detailContentDetail{
+  display: flex;
+  height: 30rpx;
+   text-align: left;
+}
+
+
