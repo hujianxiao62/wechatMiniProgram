@@ -13,7 +13,7 @@ Page({
     wx.request({
       url: 'https://test-miniprogram.com/api/news/detail',
       data: {
-        id: 1523074607690,
+        id: 1523074607672,
       },
       success: res => {
         console.log(res)

@@ -34,4 +34,21 @@
    text-align: left;
 }
 
+.detailContent_image {
+   text-align: left;
+     z-index: -1;
+}
 
+.detailContent_p {
+  font-size: 35rpx;
+   text-align:left;
+}
+
+.detailContent_strong{
+  position: relative;
+   text-align: left;
+}
+
+.detailContent_Wrapper{
+   position: relative;
+}

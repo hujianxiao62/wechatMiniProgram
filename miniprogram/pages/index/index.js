@@ -28,7 +28,6 @@ Page({
           firstNewsFig: result[0].firstImage,
         })
 
-
         //set gnNewsTitle
         let gnNewsTitle = []
         for (let i = 0; i < result.length-1; i += 1) {
@@ -50,7 +49,9 @@ Page({
     wx.showToast()
   },
 
-  onTapContent(){
+  onTapContent(event){
+    var newsId = event.currentTarget.dataset.id
+    console.log(newsId)
     wx.navigateTo({
       url: '/pages/content/content',
     })
