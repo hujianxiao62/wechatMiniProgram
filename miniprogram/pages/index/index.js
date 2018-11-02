@@ -21,6 +21,10 @@ Page({
   },
 
   onLoad(){
+    this.loadNews()
+  },
+
+  loadNews(){
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',
       data: {
@@ -29,20 +33,20 @@ Page({
       success: res => {
         console.log(res)
         let result = res.data.result
-    
-    
+
+
         //set fisrtNews
         this.setData({
           firstNewsTitle: result[0].title,
           firstNewsDate: result[0].date,
-            firstNewsSrc: result[0].source,
+          firstNewsSrc: result[0].source,
           firstNewsFig: result[0].firstImage,
           firstNewsId: result[0].id,
         })
 
         //set gnNewsTitle
         let gnNewsTitle = []
-        for (let i = 0; i < result.length-1; i += 1) {
+        for (let i = 0; i < result.length - 1; i += 1) {
           gnNewsTitle.push({
             title: result[i + 1].title,
             date: result[i + 1].date,
@@ -60,8 +64,8 @@ Page({
 
   onTapHeader(event){
     var headerId = event.currentTarget.dataset.headerid
-    console.log(headerMap[headerId])
-
+    this.setData({ currentHeader: headerMap[headerId]}),
+      this.loadNews()
   },
 
   onTapContent(event){
