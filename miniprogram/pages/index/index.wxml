@@ -1,10 +1,10 @@
 <view class="headerList">
 
-  <view class="headerName" bindtap='onTapHeader' wx:for="{{headerTitle}}">{{item}} </view>
+  <view class="headerName" bindtap='onTapHeader' data-headerid='{{item}}' wx:for="{{headerTitle}}">{{item}} </view>
 
 </view>
 
-<view class="fisrtNewsWrapper" bindtap='onTapContent'>
+<view class="fisrtNewsWrapper" data-newsid='{{firstNewsId}}' bindtap='onTapContent'>
   <view class="firstTitle">{{firstNewsTitle}}</view>
   <view class="firstDate">{{firstNewsDate}}</view>
   <view class="firstSrc">{{firstNewsSrc}}</view>
@@ -14,7 +14,7 @@
 <scroll-view>
   <view class="gnList">
 
-    <view class="gnContent" bindtap='onTapContent' wx:for="{{gnNewsTitle}}">
+    <view class="gnContent" bindtap='onTapContent' wx:for="{{gnNewsTitle}}" data-newsid='{{item.newsId}}'>
       <view class="gnContentText">
         <view class="gnContent_title">{{item.title}}</view>
         <view class="gnContentDetail">

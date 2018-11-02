@@ -9,11 +9,12 @@ Page({
     detailNewsContent:[],
   },
 
-  onLoad() {
+  onLoad(options) {
+    console.log(options.newsId)
     wx.request({
       url: 'https://test-miniprogram.com/api/news/detail',
       data: {
-        id: 1523074607672,
+        id: options.newsId,
       },
       success: res => {
         console.log(res)
