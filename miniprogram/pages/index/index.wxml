@@ -1,17 +1,22 @@
-<view class="headerList">
-
-  <view class="headerName" bindtap='onTapHeader' data-headerid='{{item}}' wx:for="{{headerTitle}}">{{item}} </view>
-
-</view>
+  <view class="headerList">
+    <view wx:for="{{headerTitle}}"
+          wx:for-index="i"
+          wx:key="*this"
+          class="{{headerTitle[i] === currentHeader? 'headerNameSelected': 'headerName'}}"
+          bindtap='onTapHeader' data-headerid='{{item}}' >{{headerTitleC[i]}}
+    </view>
+  </view>
 
 <view class="fisrtNewsWrapper" data-newsid='{{firstNewsId}}' bindtap='onTapContent'>
   <view class="firstTitle">{{firstNewsTitle}}</view>
-  <view class="firstDate">{{firstNewsDate}}</view>
-  <view class="firstSrc">{{firstNewsSrc}}</view>
+  <view class="firstTitleDetail">
+    <view class="firstSrc">{{firstNewsSrc}}</view>
+  </view>
   <image class="firstFig" src="{{firstNewsFig}}" mode="scaleToFill"></image>
 </view>
 
 <scroll-view>
+
   <view class="gnList">
 
     <view class="gnContent" bindtap='onTapContent' wx:for="{{gnNewsTitle}}" data-newsid='{{item.newsId}}'>
@@ -19,7 +24,6 @@
         <view class="gnContent_title">{{item.title}}</view>
         <view class="gnContentDetail">
           <view class="gnContent_src">{{item.src}}</view>
-          <view class="gnContent_date">{{item.date}}</view>
         </view>
       </view>
       <image class="gnContent_fig" src='{{item.fig}}'> </image>
