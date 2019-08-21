@@ -2,7 +2,7 @@ Page({
 
   data: {
 
-    headerTitleC: ['国际', '国际', '财经', '娱乐', '军事', '体育', '其他'],
+    headerTitleC: ['国内', '国际', '财经', '娱乐', '军事', '体育', '其他'],
     headerTitle : ['gn', 'gj', 'cj', 'yl', 'js', 'ty', 'other'],
     currentHeader: 'gn',
     gnNewsTitle:[],
